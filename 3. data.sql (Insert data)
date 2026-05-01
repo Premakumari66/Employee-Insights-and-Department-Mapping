@@ -1,0 +1,9 @@
+INSERT INTO Employee VALUES
+(1,'Amit',50000,'it'),
+(2,'Ravi',60000,'finance'),
+(3,'Sara',70000,'production');
+
+INSERT INTO Department VALUES
+('it','Information Technology'),
+('finance','Finance Department'),
+('production','Production Department');
