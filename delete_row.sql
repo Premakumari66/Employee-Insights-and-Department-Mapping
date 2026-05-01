@@ -1,0 +1,30 @@
+CREATE DATABASE infosys_db;
+USE infosys_db;
+
+CREATE TABLE EMPLOYEES(
+employeeid int,
+name VARCHAR(50),
+Department VARCHAR(50)
+);
+DELETE FROM EMPLOYEES
+WHERE employeeid NOT IN (
+SELECT MIN(employeeid)
+FROM EMPLOYEES
+GROUP BY name, Department
+);
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM EMPLOYEES
+WHERE employeeid NOT IN (
+    SELECT employeeid
+    FROM (
+        SELECT MIN(employeeid) AS employeeid
+        FROM EMPLOYEES
+        GROUP BY name, Department
+    ) AS temp
+);
+SET SQL_SAFE_UPDATES = 1;
+DESCRIBE EMPLOYEES;
+SHOW COLUMNS FROM EMPLOYEES;
+SHOW TABLES;
+SELECT * FROM EMPLOYEES;
