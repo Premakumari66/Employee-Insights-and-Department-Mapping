@@ -1,0 +1,15 @@
+-- INNER JOIN
+SELECT e.name, e.salary, d.dept_name
+FROM Employee e
+INNER JOIN Department d
+ON e.department = d.department;
+
+-- Second highest salary
+SELECT MAX(salary) AS SecondHighestSalary
+FROM Employee
+WHERE salary < (SELECT MAX(salary) FROM Employee);
+
+-- Count employees by department
+SELECT department, COUNT(*) AS total
+FROM Employee
+GROUP BY department;
