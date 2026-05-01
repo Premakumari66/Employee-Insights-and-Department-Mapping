@@ -43,13 +43,25 @@ ON e.department = d.department;
 * Improved database design skills
 * Better problem-solving using SQL
 
----
 
 ## Conclusion
 
 This project helps in understanding how relational databases work and how data from multiple tables can be combined to generate meaningful insights.
 
----
+##  Dashboard Screenshots
+
+###  Dashboard Overview
+
+![Dashboard](screenshots/dashboard_overview.png)
+
+###  KPI Metrics
+
+![KPI](screenshots/kpi_cards.png)
+
+###  Department Analysis
+
+![Department](screenshots/department_analysis.png)
+
 
 
 
