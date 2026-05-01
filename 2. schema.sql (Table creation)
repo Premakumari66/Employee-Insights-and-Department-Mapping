@@ -1,0 +1,14 @@
+CREATE DATABASE practice_db;
+USE practice_db;
+
+CREATE TABLE Employee (
+    id INT,
+    name VARCHAR(50),
+    salary INT,
+    department VARCHAR(50)
+);
+
+CREATE TABLE Department (
+    department VARCHAR(50),
+    dept_name VARCHAR(50)
+);
